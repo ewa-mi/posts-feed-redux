@@ -15,7 +15,6 @@ export default function feedSliceReducer(state = initialState, action) {
 
     case "SET_OFFSET": {
       const n = (newState.offset += 5);
-      console.log("new state", n);
 
       break;
     }
