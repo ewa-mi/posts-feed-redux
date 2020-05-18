@@ -22,15 +22,12 @@ export function setOffset() {
   };
 }
 
-//thunk?
-
 export async function fetchNext5Posts(dispatch, getState) {
   const state = getState();
   const { feed } = state;
   const { offset } = feed;
   const response = await axios.get(`${API_URL}/posts?offset=${offset}&limit=5`);
 
-  const action = setPosts(response.data.rows);
-
-  dispatch(action);
+  dispatch(setPosts(response.data.rows));
+  dispatch(setLoading(false));
 }
