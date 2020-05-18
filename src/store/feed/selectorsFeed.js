@@ -3,7 +3,7 @@ export const selectLoading = (state) => {
 };
 
 export const selectPosts = (state) => {
-  return state.feed.posts.data;
+  return state.feed.posts;
 };
 
 export const selectOffset = (state) => {

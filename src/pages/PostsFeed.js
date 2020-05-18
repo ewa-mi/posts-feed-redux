@@ -19,9 +19,11 @@ export default function PostsFeed() {
   const dispatch = useDispatch();
   const loading = useSelector(selectLoading);
   const posts = useSelector(selectPosts);
+  console.log("select", posts);
   const offset = useSelector(selectOffset);
 
   useEffect(() => {
+    console.log("show", offset);
     dispatch(fetchNext5Posts);
   }, [dispatch, offset]);
 
@@ -40,7 +42,7 @@ export default function PostsFeed() {
       <div className="PostsFeed">
         <h1 className="header">Recent posts</h1>
 
-        {posts.rows.map((post) => (
+        {posts.map((post) => (
           <div className="post" key={post.id}>
             <h2>{post.title}</h2>
             <p>

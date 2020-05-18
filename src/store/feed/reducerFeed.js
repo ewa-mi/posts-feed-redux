@@ -20,7 +20,7 @@ export default function feedSliceReducer(state = initialState, action) {
       break;
     }
     case "SET_POSTS": {
-      newState.posts = action.payload;
+      newState.posts = [...state.posts, ...action.payload];
       break;
     }
     default: {
