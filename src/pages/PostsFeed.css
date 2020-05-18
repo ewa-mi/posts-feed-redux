@@ -1,0 +1,41 @@
+.PostsFeed {
+  margin-left: 50px;
+}
+
+.post {
+  margin-bottom: 40px;
+  border: 0.5px solid gray;
+  padding-left: 15px;
+  width: 700px;
+  border-radius: 5px;
+}
+
+.tag {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 2px;
+}
+
+.header {
+  margin-bottom: 50px;
+  color: tomato;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+button {
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: rgb(95, 233, 203);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(142, 247, 224);
+}
+
+button:focus {
+  outline: none;
+}
