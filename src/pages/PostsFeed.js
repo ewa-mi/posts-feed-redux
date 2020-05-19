@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Moment from "react-moment";
 import {
   setLoading,
@@ -38,6 +39,7 @@ export default function PostsFeed() {
           {posts.map((post) => (
             <div className="post" key={post.id}>
               <h2>{post.title}</h2>
+              <Link to={`/post/${post.id}`}>read more</Link>
               <p>
                 <Moment format="YYYY-MM-DD">{post.createdAt}</Moment>{" "}
                 {post.tags.map((tag) => (
