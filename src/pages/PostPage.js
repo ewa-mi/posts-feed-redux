@@ -36,7 +36,7 @@ export default function PostPage() {
           {postData.comments.rows.map((row) => (
             <div key={row.id}>
               <p>
-                {row.text} // {row.developer.name}
+                {row.text} | {row.developer.name}
               </p>
             </div>
           ))}
